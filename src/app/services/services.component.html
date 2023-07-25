@@ -1,1 +1,8 @@
-<p>services works!</p>
+<div class="services-container">
+  <div *ngFor="let service of services" class="service-card">
+    <img [src]="service.image" alt="Imagen del servicio" class="service-image">
+    <h2 class="service-title">{{ service.title }}</h2>
+    <p class="service-description">{{ service.description }}</p>
+    <p class="service-price">{{ service.price | currency }}</p>
+  </div>
+</div>
